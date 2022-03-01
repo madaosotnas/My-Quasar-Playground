@@ -1,13 +1,12 @@
 /* Problem number 1 but actually many problem i had :D
-in this case, I want to display the selected date for easy reading in Indonesian spelling DD MM YYYY e.g 1 Januari 2022 using the Indonesian language pack in Quasar 'id'
+In this case, I want to display the selected date for easy reading in Indonesian spelling or other DD MM YYYY eg 1 Januari 2022 using the Indonesian language pack in Quasar 'id'
 
-but in QDate it says that a good format should be YYYY/MM/DD and sure enough, when I use a mask, I get a problem, when I use the formatDate() function it returns an undefined value in several months
+But in QDate it says that a good format should be YYYY/MM/DD and sure enough, when I use a mask, I get a problem, when I use the formatDate() function it returns an undefined value in several months
 
-after looking around for how to solve it I came across the issue from the following link: https://github.com/quasarframework/quasar/issues/3287
+After looking around for how to solve it I came across the issue from the following link: https://github.com/quasarframework/quasar/issues/3287
 
-and produce the following solution:
+And produce the following solution, keep in mind this solution may be not better than other
 */
-
 
 <template>
   <q-page class="text-body">
@@ -15,7 +14,7 @@ and produce the following solution:
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     <div class="row">
       <div class="col-3">
-
+        <!-- another field form -->
       </div>
       <div class="col-6">
         <q-field outlined dense v-model="tanggalValue" @click.native="$refs.qTglahir.show()" label="Tanggal Lahir">
@@ -30,6 +29,9 @@ and produce the following solution:
             </q-icon>
           </template>
         </q-field>
+      </div>
+      <div class="col-3">
+        <!-- another field form -->
       </div>
     </div>
   </q-page>
